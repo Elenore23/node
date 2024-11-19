@@ -27,7 +27,13 @@ const expected_keys = [
 ];
 
 const hasUndici = process.config.variables.node_builtin_shareable_builtins.includes('deps/undici/undici.js');
+const hasAmaro = process.config.variables.node_builtin_shareable_builtins.includes('deps/amaro/dist/index.js');
 
+if (process.config.variables.node_use_amaro) {
+  if (hasAmaro) {
+    expected_keys.push('amaro');
+  }
+}
 if (hasUndici) {
   expected_keys.push('undici');
 }
