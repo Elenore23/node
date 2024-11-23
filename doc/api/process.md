@@ -2111,10 +2111,10 @@ class Test {
   constructor() {
     finalization.register(this, (ref) => ref.dispose());
 
-    // even something like this is highly discouraged
+    // Even something like this is highly discouraged
     // finalization.register(this, () => this.dispose());
-   }
-   dispose() {}
+  }
+  dispose() {}
 }
 ```
 
@@ -3497,7 +3497,7 @@ console.log(`Report on exception: ${report.reportOnUncaughtException}`);
 ### `process.report.excludeEnv`
 
 <!-- YAML
-added: REPLACEME
+added: v23.3.0
 -->
 
 * {boolean}

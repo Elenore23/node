@@ -371,7 +371,7 @@ util.formatWithOptions({ colors: true }, 'See object %O', { foo: 42 });
 <!-- YAML
 added: v22.9.0
 changes:
-  - version: REPLACEME
+  - version: v23.3.0
     pr-url: https://github.com/nodejs/node/pull/55626
     description: The API is renamed from `util.getCallSite` to `util.getCallSites()`.
 -->
@@ -513,7 +513,7 @@ The mapping between error codes and string messages is platform-dependent.
 ```js
 fs.access('file/that/does/not/exist', (err) => {
   const name = util.getSystemErrorMessage(err.errno);
-  console.error(name);  // no such file or directory
+  console.error(name);  // No such file or directory
 });
 ```
 
